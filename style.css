@@ -69,3 +69,91 @@ h1 {
     height: 3px;
     width: 2px;
 }
+
+
+
+
+
+
+
+
+/* Styl dla ekranów o szerokości 768px i mniejszych (tablety, mniejsze laptopy) */
+@media (max-width: 768px) {
+    #navbar {
+        width: 100%; /* Dostosowanie nawigacji do szerokości ekranu */
+        height: auto;
+        position: relative;
+        top: 0;
+        float: none;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8); /* Lekko przezroczysty czarny */
+    }
+    
+    #navbar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    /* Zmniejszenie rozmiaru ikon */
+    #navbar ul li a {
+        font-size: 1rem;
+    }
+
+    /* Szerokość zawartości w sekcjach */
+    #rest {
+        width: 100%;
+    }
+
+    /* Zmniejszenie rozmiaru nagłówków */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Dostosowanie obrazów */
+    .spaceship img {
+        width: 100%; /* Obrazy zajmują pełną szerokość ekranu */
+        height: auto;
+    }
+
+    /* Marginesy w sekcjach */
+    section {
+        padding: 20px;
+    }
+}
+
+/* Styl dla ekranów o szerokości 480px i mniejszych (smartfony) */
+@media (max-width: 480px) {
+    #navbar ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Dalsze zmniejszenie rozmiaru ikon */
+    #navbar ul li a {
+        font-size: 0.9rem;
+    }
+
+    /* Mniejsze marginesy i odstępy */
+    section {
+        padding: 10px;
+    }
+
+    /* Dostosowanie nagłówków */
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Zmniejszenie sekcji do mniejszej wysokości */
+    #intro-section, #about-section, #skills-section, #projects-section, #contacts-section {
+        height: auto;
+    }
+
+    /* Dostosowanie paddingu i szerokości obrazów */
+    .spaceship img {
+        width: 100%;
+        height: auto;
+    }
+}
